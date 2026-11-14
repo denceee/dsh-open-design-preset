@@ -1,9 +1,9 @@
 {
   "name": "dsh-open-design-preset",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": false,
   "type": "module",
-  "description": "OpenDesign agent preset for DeepSeek Harness: senior product-designer persona, 77 functional skills, 152 open-source design-system skills, and a local OpenDesign MCP bridge.",
+  "description": "OpenDesign agent preset for DeepSeek Harness: senior product-designer persona, 85 functional skills, 152 open-source design-system skills, a settings panel, and a local OpenDesign MCP bridge.",
   "license": "Apache-2.0",
   "author": "denceee",
   "repository": {
@@ -22,23 +22,44 @@
     "agent-preset",
     "design-agent"
   ],
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "generate-design-system-skills": "node scripts/generate-design-system-skills.mjs",
-    "install-design-system-skills": "node scripts/install-design-system-skills.mjs"
+    "install-design-system-skills": "node scripts/install-design-system-skills.mjs",
+    "install-skills": "node scripts/install-skills.mjs"
   },
   "files": [
+    "index.js",
+    "client.js",
     "cordis.patch.yml",
     "README.md",
+    "icon.svg",
+    "locale/*.json",
     "assets/readme/**",
+    "skills/**",
     "design-system-skills/**",
     "scripts/**"
   ],
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
     }
   }
 }

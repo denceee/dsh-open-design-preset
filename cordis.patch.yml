@@ -245,3 +245,8 @@
           - id: tool-plugin-market
             name: '@deepseek-ai/dsh-plugin-market/tools'
             disabled: true
+
+    # Settings surface: skill install check, global availability, enable/disable.
+    - id: open-design-settings
+      name: 'dsh-open-design-preset'
+      inject: [webServer]

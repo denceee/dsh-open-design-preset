@@ -5,14 +5,14 @@
 <p align="center">
   <a href="https://github.com/deepseek-ai/deepseek-harness"><img src="./assets/readme/badge-dsh.svg" height="40" alt="DeepSeek Harness (DSH)"></a>
   <img src="./assets/readme/badge-preset.svg" height="40" alt="DSH Agent Preset">
-  <img src="./assets/readme/badge-skills.svg" height="40" alt="229 OpenDesign skills">
+  <img src="./assets/readme/badge-skills.svg" height="40" alt="237 OpenDesign skills">
   <img src="./assets/readme/badge-mcp.svg" height="40" alt="OpenDesign MCP ready">
   <a href="https://www.npmjs.com/package/dsh-open-design-preset"><img src="https://img.shields.io/npm/v/dsh-open-design-preset?logo=npm&label=npm&color=CB3837" height="40" alt="npm version"></a>
 </p>
 
 ## 一个预设，把 DSH 变成设计工作室
 
-OpenDesign 预设把 **DeepSeek Harness（DSH）** 变成一间设计工作室。它不是一段提示词，也不是把技能文件夹丢进目录：它把「资深产品设计师」的判断方式、OpenDesign 的 **77 个功能技能**、**152 套开源设计系统**，以及本地 OpenDesign 应用的 **MCP 工具**，组合进同一个可切换的预设。
+OpenDesign 预设把 **DeepSeek Harness（DSH）** 变成一间设计工作室。它不是一段提示词，也不是把技能文件夹丢进目录：它把「资深产品设计师」的判断方式、OpenDesign 的 **85 个功能技能**、**152 套开源设计系统**，以及本地 OpenDesign 应用的 **MCP 工具**，组合进同一个可切换的预设。
 
 选中它之后，DSH 会先澄清 brief，再锁定视觉方向与 `DESIGN.md`，加载正确的设计技能，最后按交付前检查清单产出**可运行的网页、演示、看板或动效**。
 
@@ -27,9 +27,10 @@ OpenDesign 预设把 **DeepSeek Harness（DSH）** 变成一间设计工作室�
 | 层 | 作用 | 实际内容 |
 | --- | --- | --- |
 | `persona` | 设计人格与决策顺序 | 源自 OpenDesign Slim Core Charter 的资深产品设计师人设 |
-| `skill-filesystem` | 设计工作流与设计系统 | **77 个**功能技能 + **152 个**设计系统技能，按需加载 |
+| `skill-filesystem` | 设计工作流与设计系统 | **85 个**功能技能 + **152 个**设计系统技能，按需加载 |
 | `open-design-mcp` | 与本地 OpenDesign 应用互通 | **25 个 MCP 工具**：项目/文件读取、`create_artifact`、`write_file`、`start_run` |
 | `DSH tools` | 执行与交付 | `bash` / `pwsh`、文件读写、搜索、任务、子智能体、`present` |
+| `open-design-settings` | 设置页 | 安装检查、技能禁用/启用、全局同名检测 |
 
 ## 快速开始
 
@@ -38,7 +39,7 @@ OpenDesign 预设把 **DeepSeek Harness（DSH）** 变成一间设计工作室�
 从 npm 安装：
 
 ```text
-plugin_manager install_bundle target=dsh-open-design-preset@1.0.2
+plugin_manager install_bundle target=dsh-open-design-preset@1.1.0
 ```
 
 或从源码安装：
@@ -49,11 +50,19 @@ cd dsh-open-design-preset
 plugin_manager install_bundle target=<当前目录的绝对路径>
 ```
 
-### 2. 新建会话并选择预设
+### 2. 同步技能
+
+打开 **设置 → OpenDesign**，点击「安装缺失技能」；或从源码目录运行：
+
+```powershell
+node scripts/install-skills.mjs
+```
+
+### 3. 新建会话并选择预设
 
 打开 DSH，新建会话，在预设选择器中选择 **OpenDesign**。
 
-### 3. 给一个设计 brief
+### 4. 给一个设计 brief
 
 ```text
 做一个面向投资人的 AI 财务分析仪表盘，深色界面，信息密度高，
@@ -64,7 +73,7 @@ plugin_manager install_bundle target=<当前目录的绝对路径>
 
 ## 技能库
 
-**77 个功能技能**覆盖设计工作的主要路径，同时保留 DSH 全局技能（如 `frontend-design`、`docx` / `pdf` / `pptx`）的完整版本：
+**85 个功能技能**覆盖设计工作的主要路径；不按全局同名过滤，DSH 全局技能（如 `frontend-design`、`docx` / `pdf` / `pptx`）也照常可用：
 
 - **界面与原型** — `design-brief`、`web-design-guidelines`、`login-flow`、`mockup-device-3d`、`web-clone`
 - **演示与文档** — `deck-swiss-international`、`deck-guizang-editorial`、`ppt-keynote`、`doc-kami-parchment`
@@ -72,7 +81,7 @@ plugin_manager install_bundle target=<当前目录的绝对路径>
 - **品牌与视觉** — `brand-extract`、`brandkit`、`impeccable-design-polish`
 - **评审与交付** — `pr-feedback-quality-gate`、`review-animations`、`pptx-html-fidelity-audit`
 
-技能来自 [`nexu-io/open-design`](https://github.com/nexu-io/open-design) 的 `skills/`。只收录自包含功能技能，剔除仅作目录索引的 stub 和与 DSH 全局技能重名的条目，因此 77 个都能直接执行，不会用空壳覆盖全局技能。
+技能来自 [`nexu-io/open-design`](https://github.com/nexu-io/open-design) 的 `skills/`。只剔除仅作目录索引的 stub；**重名技能保留**，因此即使你没有安装某个全局技能，预设也能独立提供完整版本。设置页会标出哪些技能在全局已安装。
 
 ## 152 套 OpenDesign 设计系统
 
@@ -96,13 +105,13 @@ open-design-x-ai
 用 open-design-linear-app 的设计系统做一个项目管理仪表盘。
 ```
 
-仓库内已经带了一份 152 个 skill 的预构建副本；安装后复制到 DSH 数据目录：
+仓库内已经带了完整的预构建副本（85 个功能技能 + 152 个设计系统技能）；安装后复制到 DSH 数据目录：
 
 ```powershell
-node scripts/install-design-system-skills.mjs
+node scripts/install-skills.mjs
 ```
 
-如果要从 OpenDesign 应用或最新 GitHub 目录重新生成：
+如果要从 OpenDesign 应用或最新 GitHub 目录重新生成设计系统技能：
 
 ```powershell
 node scripts/generate-design-system-skills.mjs
@@ -116,6 +125,15 @@ node scripts/generate-design-system-skills.mjs
 ```
 
 生成的 152 个 skill 写入 `~/.dsh/open-design/design-system-skills`。预设通过 `skill-filesystem` 的两个 `customSkillDirs` 同时加载功能技能与设计系统技能；设计系统文档较长，预设的 tool-result pruner 已放宽到 64K 字符，保证整份 `DESIGN.md` 能完整进入上下文。
+
+## 设置页
+
+安装后在 **设置 → OpenDesign** 打开技能管理：
+
+- **安装检查** — 显示功能技能与设计系统技能的 `已安装 / 预期数量`，缺少时提供「安装缺失技能」按钮。
+- **技能开关** — 每行一个 `SKILL.md` / `SKILL.md.disabled` 开关；禁用后立即从技能目录移除，重新启用即可恢复。
+- **全局同名检测** — 扫描 `~/.dsh/skills`、`~/.agents/skills` 等全局根；如果全局已有同名技能，显示「全局已安装」徽章。
+- **不剔除重名** — 85 个功能技能与 152 个设计系统技能都保留；本地版本不会因为全局已有同名项而缺失。
 
 ## 刷新技能库
 
@@ -132,7 +150,7 @@ git -C "$env:USERPROFILE\.dsh\open-design\repo" pull --ff-only
 
 - **DSH**：`0.2.2-rc.1`（通过 `@deepseek-ai/dsh-agent-preset` 原生声明）
 - **OpenDesign**：本机测试版本 `0.26.1`；MCP 工具需要 OpenDesign daemon 在 `127.0.0.1:7456` 运行
-- **不装 OpenDesign 也能用**：persona、77 个功能技能和 152 个设计系统技能仍然可用；MCP 工具会提示 daemon 不可达
+- **不装 OpenDesign 也能用**：persona、85 个功能技能和 152 个设计系统技能仍然可用；MCP 工具会提示 daemon 不可达
 
 ## 文件结构
 
@@ -140,10 +158,16 @@ git -C "$env:USERPROFILE\.dsh\open-design\repo" pull --ff-only
 .
 ├── cordis.patch.yml               # preset 声明与插件组合
 ├── package.json                   # DSH bundle 清单
+├── index.js                       # 设置页 host 路由：检查/安装/开关
+├── client.js                      # 设置页 UI
+├── icon.svg                       # 插件图标
+├── locale/                        # 设置页标题与描述
+├── skills/                        # 85 个预构建功能 skill（保留重名）
 ├── design-system-skills/          # 152 个预构建设计系统 skill
 ├── scripts/
 │   ├── generate-design-system-skills.mjs  # 从 OpenDesign 目录重新生成
-│   └── install-design-system-skills.mjs   # 复制预构建 skill 到 DSH 数据目录
+│   ├── install-skills.mjs                 # 复制全部预构建 skill 到 DSH 数据目录
+│   └── install-design-system-skills.mjs   # 只复制设计系统 skill（兼容旧用法）
 ├── assets/readme/
 │   ├── hero.svg                   # 首屏视觉
 │   ├── workflow.svg               # 工作流示意
@@ -158,3 +182,4 @@ git -C "$env:USERPROFILE\.dsh\open-design\repo" pull --ff-only
 - 设计系统来源：[`design-systems/`](https://github.com/nexu-io/open-design/tree/main/design-systems) · 152 套 · Apache-2.0
 - 品牌相关设计系统是审美参考，不是对应品牌的官方资产
 - 本地技能目录：`~/.dsh/open-design/skills` 与 `~/.dsh/open-design/design-system-skills`
+

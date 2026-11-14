@@ -1,0 +1,5 @@
+﻿OpenDesign functional skills
+Source: https://github.com/nexu-io/open-design/tree/main/skills
+Commit: 59e4f2ae85de7e7318a5e6bdcf3a34584c4b7582
+License: Apache-2.0
+Installed: 85 self-contained functional skills (duplicate names kept; catalogue-only stubs excluded)
