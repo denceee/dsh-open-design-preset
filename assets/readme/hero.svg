@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">OpenDesign — DeepSeek Harness agent preset</title>
+  <desc id="desc">OpenDesign preset: a senior product designer persona, 77 curated OpenDesign skills, and a live MCP bridge to the local OpenDesign app.</desc>
+
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1E1C18" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="380" rx="28" fill="#12110F"/>
+  <rect x="680" y="0" width="520" height="380" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- DSH badge -->
+  <g id="dsh-badge">
+    <rect x="64" y="40" width="266" height="34" rx="17" fill="#18202E" stroke="#2C405C"/>
+    <circle cx="82" cy="57" r="5" fill="#5AD2FF"/>
+    <text x="96" y="63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="1.2" fill="#CFE9FF">DEEPSEEK HARNESS · DSH</text>
+  </g>
+
+  <!-- Title block -->
+  <g id="title-block">
+    <text x="64" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="88" font-weight="700" letter-spacing="-2" fill="#F7F3EA">OpenDesign</text>
+    <text x="64" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="30" font-weight="600" fill="#F7F3EA">给 DSH 装上一位资深产品设计师。</text>
+    <text x="64" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" fill="#AAA396">从 brief、设计系统，到可交付的网页 / 演示 / 看板。</text>
+    <line x1="64" y1="286" x2="604" y2="286" stroke="#2A2722" stroke-width="1"/>
+    <g id="metadata" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <text x="64" y="314" font-size="14" letter-spacing="1.4" fill="#6F6960">PRESET</text>
+      <text x="64" y="342" font-size="18" fill="#D8D0C2">open-design</text>
+      <text x="228" y="314" font-size="14" letter-spacing="1.4" fill="#6F6960">SKILLS</text>
+      <text x="228" y="342" font-size="18" fill="#D8D0C2">77</text>
+      <text x="350" y="314" font-size="14" letter-spacing="1.4" fill="#6F6960">MCP TOOLS</text>
+      <text x="350" y="342" font-size="18" fill="#D8D0C2">25</text>
+      <text x="506" y="314" font-size="14" letter-spacing="1.4" fill="#6F6960">DSH</text>
+      <text x="506" y="342" font-size="18" fill="#D8D0C2">0.2.2+</text>
+    </g>
+  </g>
+
+  <!-- Project native proof: preset composition as a design canvas -->
+  <g id="composition-board">
+    <rect x="708" y="62" width="424" height="280" rx="18" fill="#000000" opacity="0.35"/>
+    <rect x="700" y="54" width="424" height="280" rx="18" fill="#F5F0E6"/>
+    <line x1="700" y1="94" x2="1124" y2="94" stroke="#D8D0C2" stroke-width="1"/>
+
+    <!-- OpenDesign mark -->
+    <g transform="translate(716 65) scale(0.22)">
+      <path d="M41 0.726562C76.5753 0.726562 82 6.15121 82 41.7266C82 77.3019 76.5753 82.7266 41 82.7266C5.42465 82.7266 0 77.3019 0 41.7266C0 6.15121 5.42465 0.726562 41 0.726562ZM40.8906 16.4258C26.9164 16.4258 15.5879 27.7543 15.5879 41.7285C15.5879 46.7757 15.5879 58.0219 15.5879 63.665C15.588 65.5281 17.091 67.0312 18.9541 67.0312H40.8906C54.8647 67.0311 66.1932 55.7026 66.1934 41.7285C66.1934 27.7544 54.8647 16.4259 40.8906 16.4258ZM40.8906 21.4863C52.0699 21.4864 61.1328 30.5492 61.1328 41.7285C61.1327 52.9078 52.0699 61.9706 40.8906 61.9707C29.7113 61.9707 20.6485 52.9078 20.6484 41.7285C20.6484 30.5491 29.7113 21.4863 40.8906 21.4863ZM32.6445 32.2549C31.9921 32.0027 31.3503 32.6469 31.5996 33.3037L39.3145 53.6045C39.6345 54.4468 40.877 54.2162 40.877 53.3145V41.6836H52.665C53.5605 41.6836 53.7908 40.4368 52.9551 40.1133L32.6445 32.2549Z" fill="#26251E"/>
+    </g>
+    <text x="744" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="1" fill="#6D6558">PRESET / OPEN-DESIGN</text>
+
+    <!-- Composition rows -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <text x="724" y="122" font-size="14" fill="#D65A3C">01</text>
+      <text x="760" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" font-weight="600" fill="#26251E">persona</text>
+      <text x="760" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#71695C">资深产品设计师 · 设计判断与优先级</text>
+
+      <line x1="724" y1="158" x2="1100" y2="158" stroke="#DED7C9" stroke-width="1"/>
+      <text x="724" y="184" font-size="14" fill="#D65A3C">02</text>
+      <text x="760" y="184" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" font-weight="600" fill="#26251E">skill-filesystem</text>
+      <text x="760" y="206" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#71695C">77 个 OpenDesign 功能技能</text>
+
+      <line x1="724" y1="220" x2="1100" y2="220" stroke="#DED7C9" stroke-width="1"/>
+      <text x="724" y="246" font-size="14" fill="#D65A3C">03</text>
+      <text x="760" y="246" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" font-weight="600" fill="#26251E">open-design-mcp</text>
+      <text x="760" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#71695C">25 个工具 · 本地项目与 start_run</text>
+
+      <line x1="724" y1="282" x2="1100" y2="282" stroke="#DED7C9" stroke-width="1"/>
+      <text x="724" y="308" font-size="14" fill="#D65A3C">04</text>
+      <text x="760" y="308" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" font-weight="600" fill="#26251E">DSH tools</text>
+      <text x="760" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#71695C">bash · fs · web · agents</text>
+    </g>
+
+    <!-- Selection handles -->
+    <g fill="#F26A4B">
+      <rect x="694" y="48" width="12" height="12" rx="2"/>
+      <rect x="1118" y="48" width="12" height="12" rx="2"/>
+      <rect x="694" y="328" width="12" height="12" rx="2"/>
+      <rect x="1118" y="328" width="12" height="12" rx="2"/>
+    </g>
+  </g>
+</svg>

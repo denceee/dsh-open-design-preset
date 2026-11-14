@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="276" height="40" viewBox="0 0 276 40" role="img" aria-labelledby="title">
+  <title id="title">DeepSeek Harness — DSH</title>
+  <rect width="276" height="40" rx="10" fill="#0C1A2C"/>
+  <rect x="0.5" y="0.5" width="275" height="39" rx="9.5" fill="none" stroke="#284A72"/>
+  <circle cx="20" cy="20" r="5" fill="#5AD2FF"/>
+  <text x="34" y="25" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" letter-spacing="1" fill="#E7F5FF">DEEPSEEK HARNESS</text>
+  <text x="224" y="25" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#5AD2FF">DSH</text>
+</svg>

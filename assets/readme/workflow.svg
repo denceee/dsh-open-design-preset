@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">OpenDesign preset workflow</title>
+  <desc id="desc">The OpenDesign workflow: clarify the brief, lock direction and DESIGN.md, load the right skill and build, then verify and deliver a finished artifact.</desc>
+
+  <rect width="1200" height="360" rx="24" fill="#F5F0E6"/>
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="24" fill="none" stroke="#D9D1C2"/>
+
+  <text x="64" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="1.6" fill="#8B8374">PRESET WORKFLOW</text>
+  <text x="64" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="28" font-weight="650" fill="#26251E">从 brief 到可交付，不跳步。</text>
+  <line x1="64" y1="108" x2="1136" y2="108" stroke="#D9D1C2" stroke-width="1"/>
+
+  <g id="stages" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif">
+    <g transform="translate(64 150)">
+      <text x="0" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#D65A3C">01</text>
+      <text x="0" y="36" font-size="26" font-weight="700" fill="#26251E">BRIEF</text>
+      <text x="0" y="68" font-size="22" fill="#4A4438">需求澄清</text>
+      <text x="0" y="98" font-size="19" fill="#7A7264">只问会改变方向的</text>
+      <text x="0" y="122" font-size="19" fill="#7A7264">关键问题</text>
+    </g>
+
+    <g transform="translate(352 150)">
+      <text x="0" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#D65A3C">02</text>
+      <text x="0" y="36" font-size="26" font-weight="700" fill="#26251E">DIRECTION</text>
+      <text x="0" y="68" font-size="22" fill="#4A4438">方向 + DESIGN.md</text>
+      <text x="0" y="98" font-size="19" fill="#7A7264">品牌 token、字体、</text>
+      <text x="0" y="122" font-size="19" fill="#7A7264">颜色与布局规则</text>
+    </g>
+
+    <g transform="translate(640 150)">
+      <text x="0" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#D65A3C">03</text>
+      <text x="0" y="36" font-size="26" font-weight="700" fill="#26251E">CRAFT</text>
+      <text x="0" y="68" font-size="22" fill="#4A4438">技能驱动实现</text>
+      <text x="0" y="98" font-size="19" fill="#7A7264">加载 77 个技能中的</text>
+      <text x="0" y="122" font-size="19" fill="#7A7264">正确工作流与模板</text>
+    </g>
+
+    <g transform="translate(928 150)">
+      <text x="0" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#D65A3C">04</text>
+      <text x="0" y="36" font-size="26" font-weight="700" fill="#26251E">DELIVER</text>
+      <text x="0" y="68" font-size="22" fill="#4A4438">验证后交付</text>
+      <text x="0" y="98" font-size="19" fill="#7A7264">溢出、对比度、交互</text>
+      <text x="0" y="122" font-size="19" fill="#7A7264">态全部检查一遍</text>
+    </g>
+  </g>
+
+  <g id="arrows" stroke="#BEB4A3" stroke-width="2" fill="none">
+    <path d="M292 188H326"/>
+    <path d="M580 188H614"/>
+    <path d="M868 188H902"/>
+  </g>
+  <g fill="#BEB4A3">
+    <path d="M326 188l-8-5v10z"/>
+    <path d="M614 188l-8-5v10z"/>
+    <path d="M902 188l-8-5v10z"/>
+  </g>
+
+  <line x1="64" y1="300" x2="1136" y2="300" stroke="#D9D1C2" stroke-width="1"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" fill="#6F6759">
+    <text x="64" y="332">77 FUNCTIONAL SKILLS</text>
+    <text x="352" y="332">25 MCP TOOLS</text>
+    <text x="640" y="332">DSH AGENT PRESET</text>
+    <text x="928" y="332">HTML · DECK · DASH</text>
+  </g>
+</svg>
