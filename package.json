@@ -1,9 +1,9 @@
 {
   "name": "dsh-open-design-preset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "type": "module",
-  "description": "OpenDesign agent preset for DeepSeek Harness: senior product-designer persona plus the curated OpenDesign functional skill library.",
+  "description": "OpenDesign agent preset for DeepSeek Harness: senior product-designer persona, 77 functional skills, 152 open-source design-system skills, and a local OpenDesign MCP bridge.",
   "license": "Apache-2.0",
   "author": "denceee",
   "repository": {
@@ -25,10 +25,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "generate-design-system-skills": "node scripts/generate-design-system-skills.mjs"
+  },
   "files": [
     "cordis.patch.yml",
     "README.md",
-    "assets/readme/**"
+    "assets/readme/**",
+    "scripts/**"
   ],
   "dsh": {
     "bundle": {
