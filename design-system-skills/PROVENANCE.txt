@@ -1,0 +1,6 @@
+﻿OpenDesign design-system skills
+Source: https://github.com/nexu-io/open-design/tree/main/design-systems
+Commit: 59e4f2ae85de7e7318a5e6bdcf3a34584c4b7582
+License: Apache-2.0
+Generated: 152 skills at 2026-11-14
+Brand-referencing packages are aesthetic inspirations, not official brand assets.

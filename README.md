@@ -38,7 +38,7 @@ OpenDesign 预设把 **DeepSeek Harness（DSH）** 变成一间设计工作室�
 从 npm 安装：
 
 ```text
-plugin_manager install_bundle target=dsh-open-design-preset@1.0.1
+plugin_manager install_bundle target=dsh-open-design-preset@1.0.2
 ```
 
 或从源码安装：
@@ -96,13 +96,19 @@ open-design-x-ai
 用 open-design-linear-app 的设计系统做一个项目管理仪表盘。
 ```
 
-设计系统来自本地 OpenDesign 应用目录。安装后执行一次生成脚本：
+仓库内已经带了一份 152 个 skill 的预构建副本；安装后复制到 DSH 数据目录：
+
+```powershell
+node scripts/install-design-system-skills.mjs
+```
+
+如果要从 OpenDesign 应用或最新 GitHub 目录重新生成：
 
 ```powershell
 node scripts/generate-design-system-skills.mjs
 ```
 
-脚本默认读取 `D:\Open Design\resources\open-design\design-systems`；也可以指定目录：
+生成脚本默认读取 `D:\Open Design\resources\open-design\design-systems`；也可以指定目录：
 
 ```powershell
 $env:OD_DESIGN_SYSTEMS_DIR = "C:\path\to\design-systems"
@@ -134,8 +140,10 @@ git -C "$env:USERPROFILE\.dsh\open-design\repo" pull --ff-only
 .
 ├── cordis.patch.yml               # preset 声明与插件组合
 ├── package.json                   # DSH bundle 清单
+├── design-system-skills/          # 152 个预构建设计系统 skill
 ├── scripts/
-│   └── generate-design-system-skills.mjs  # 152 套设计系统 → DSH skills
+│   ├── generate-design-system-skills.mjs  # 从 OpenDesign 目录重新生成
+│   └── install-design-system-skills.mjs   # 复制预构建 skill 到 DSH 数据目录
 ├── assets/readme/
 │   ├── hero.svg                   # 首屏视觉
 │   ├── workflow.svg               # 工作流示意
