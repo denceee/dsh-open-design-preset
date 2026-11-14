@@ -7,6 +7,7 @@
   <img src="./assets/readme/badge-preset.svg" height="40" alt="DSH Agent Preset">
   <img src="./assets/readme/badge-skills.svg" height="40" alt="77 OpenDesign functional skills">
   <img src="./assets/readme/badge-mcp.svg" height="40" alt="OpenDesign MCP ready">
+  <a href="https://www.npmjs.com/package/dsh-open-design-preset"><img src="https://img.shields.io/npm/v/dsh-open-design-preset?logo=npm&label=npm&color=CB3837" height="40" alt="npm version"></a>
 </p>
 
 ## 一个预设，把 DSH 变成设计工作室
@@ -33,6 +34,14 @@ OpenDesign 预设把 **DeepSeek Harness（DSH）** 变成一间设计工作室�
 ## 快速开始
 
 ### 1. 安装 bundle
+
+从 npm 安装：
+
+```text
+plugin_manager install_bundle target=dsh-open-design-preset@1.0.0
+```
+
+或从源码安装：
 
 ```text
 git clone https://github.com/denceee/dsh-open-design-preset.git
